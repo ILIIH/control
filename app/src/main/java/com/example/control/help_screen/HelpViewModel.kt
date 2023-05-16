@@ -1,4 +1,4 @@
-package com.example.control
+package com.example.control.help_screen
 
 import androidx.lifecycle.ViewModel
 

@@ -1,6 +1,8 @@
 package com.example.control
 
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,8 +26,10 @@ class GameResultFragment : Fragment() {
         val level = mViewModel.getCurrentLevel()
         if (predictionResult) {
             view.score.text = "Score : +1"
+            increaseScore()
         } else {
             view.score.text = "Score : -1"
+            decreaseScore()
         }
         var description = ""
         if (level.isItSpy) {
@@ -40,5 +44,21 @@ class GameResultFragment : Fragment() {
         }
 
         return view.root
+    }
+
+    fun increaseScore() {
+        val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        val editor: SharedPreferences.Editor = prefs.edit()
+        var currentScore = prefs.getInt("Score", 0); // getting String
+        editor.putInt("Score", currentScore++); // Storing string
+        editor.apply()
+    }
+
+    fun decreaseScore() {
+        val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        val editor: SharedPreferences.Editor = prefs.edit()
+        var currentScore = prefs.getInt("Score", 0); // getting String
+        editor.putInt("Score", currentScore--); // Storing string
+        editor.apply()
     }
 }

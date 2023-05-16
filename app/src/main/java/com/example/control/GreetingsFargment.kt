@@ -26,13 +26,15 @@ class GreetingsFargment : Fragment() {
         }
 
         view.nextButton.setOnClickListener {
-            if (count == 0)view.textDescription.text = getString(R.string.greetings_text2)
-            if (count == 1)view.textDescription.text = getString(R.string.greetings_text3)
-            if (count == 2)view.textDescription.text = getString(R.string.greetings_text4)
-            if (count == 3)view.textDescription.text = getString(R.string.greetings_text5)
-            if (count == 4)view.textDescription.text = getString(R.string.greetings_text6)
-            if (count == 5)view.textDescription.text = getString(R.string.greetings_text7)
-            if (count == 6) findNavController().navigate(R.id.to_start_fragment)
+            when(count){
+                0 -> view.textDescription.text = getString(R.string.greetings_text2)
+                1 -> view.textDescription.text = getString(R.string.greetings_text3)
+                2 -> view.textDescription.text = getString(R.string.greetings_text4)
+                3 -> view.textDescription.text = getString(R.string.greetings_text5)
+                4 -> view.textDescription.text = getString(R.string.greetings_text6)
+                5 -> view.textDescription.text = getString(R.string.greetings_text7)
+                else -> findNavController().navigate(R.id.to_start_fragment)
+            }
             count++
         }
 
@@ -43,6 +45,7 @@ class GreetingsFargment : Fragment() {
         val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
         val editor: SharedPreferences.Editor = prefs.edit()
         editor.putString("Initialized", "true"); // Storing string
+        editor.putInt("Score", 0); // Storing string
         editor.apply(); // commit changes
     }
 
