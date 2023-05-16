@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name" translatable="false">Control</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="greetings_text1">The semiconductor industry has long been a source of tension between China and Taiwan. Home to the worlds largest contract chip manufacturer, TSMC, Taiwan has become a vital player in the global technology supply chain. China, on the other hand, was rapidly expanding its own semiconductor industry, but still relied on Taiwan for advanced chip design and manufacturing.</string>
+    <string name="greetings_text2">As demand for semiconductors soared, a global shortage emerged, adding pressure to the already strained relationship between China and Taiwan. China has accused Taiwan of hoarding chips, and Taiwan has accused China of stealing intellectual property.</string>
+    <string name="greetings_text3">Tensions came to a head when China announced that it was ramping up its efforts to produce its own advanced chips and reduce its reliance on Taiwan. The move was seen as a direct challenge to Taiwans dominance in the semiconductor industry.</string>
+    <string name="greetings_text4">But this did not stop China. He began to pressure Taiwanese companies operating in China, threatening to cut off access to the Chinese market if they did not comply with his demands.</string>
+    <string name="greetings_text5">The situation quickly escalated, with both sides increasingly criticizing each other. There were fears that the dispute could spill over into other areas, such as trade and security.</string>
+    <string name="greetings_text6">The semiconductor crisis continued to deepen, causing massive disruptions in the technology industry. Prices for tech products have skyrocketed, and many companies have struggled to keep up with demand.</string>
+    <string name="greetings_text7">Then China decided to send its agents to Taiwan, it is your responsibility to catch them.</string>
+    <string name="next">Next </string>
+    <string name="start_game">Start game </string>
+    <string name="settings">Settings </string>
+    <string name="help">Help </string>
+
+    <string name="My_score">My score </string>
+    <string name="replica0">Hello. How are you? </string>
+    <string name="replica1">I would like to cross the border</string>
+    <string name="ask_additional_info">Ask documents</string>
+
+
+</resources>

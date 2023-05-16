@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation_graph"
+    app:startDestination="@id/greetingsFargment">
+
+    <fragment
+        android:id="@+id/greetingsFargment"
+        android:name="com.example.control.GreetingsFargment"
+        android:label="fragment_greetings_fargment"
+        tools:layout="@layout/fragment_greetings_fargment" >
+        <action
+            android:id="@+id/to_start_fragment"
+            app:destination="@id/startGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startGameFragment"
+        android:name="com.example.control.StartGameFragment"
+        android:label="fragment_start_game"
+        tools:layout="@layout/fragment_start_game" >
+        <action
+            android:id="@+id/to_game_fragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+        <action
+            android:id="@+id/to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.control.game_screen.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/to_passportFragment"
+            app:destination="@id/passportFragment"
+            app:popUpTo="@id/gameFragment" />
+        <action
+            android:id="@+id/to_bioFragment"
+            app:destination="@id/bioFragment"
+            app:popUpTo="@id/gameFragment" />
+        <action
+            android:id="@+id/to_gameResultFragment"
+            app:destination="@id/gameResultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bioFragment"
+        android:name="com.example.control.BioFragment"
+        android:label="BioFragment" >
+        <action
+            android:id="@+id/back_to_gameFragment_from_bio"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passportFragment"
+        android:name="com.example.control.PassportFragment"
+        android:label="passportFragment"
+        tools:layout="@layout/fragment_bio" >
+        <action
+            android:id="@+id/back_to_gameFragment_from_passport"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameResultFragment"
+        android:name="com.example.control.GameResultFragment"
+        android:label="fragment_game_result"
+        tools:layout="@layout/fragment_game_result" >
+        <action
+            android:id="@+id/continue_to_gameFragment_from_result"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.control.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.example.control.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.control.HelpFragment"
+        android:label="fragment_gelp"
+        tools:layout="@layout/fragment_gelp" />
+</navigation>
